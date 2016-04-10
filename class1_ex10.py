@@ -1,6 +1,7 @@
 # Class 1, Exercise 10
 # Find the crypto maps that are not using AES (based-on the transform set name). Print these entries and their corresponding transform set name.
 # There are two methods of computing the result. One of which is commented out.
+#!/usr/bin/env python
 
 from ciscoconfparse import CiscoConfParse
 

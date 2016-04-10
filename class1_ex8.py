@@ -1,5 +1,6 @@
 # Class 1, Exercise 8
 # Finds all of the crypto map entries in the file (lines that begin with 'crypto map CRYPTO') and for each crypto map entry prints out its children.
+#!/usr/bin/env python
 
 from ciscoconfparse import CiscoConfParse
 

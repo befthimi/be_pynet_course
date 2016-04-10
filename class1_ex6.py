@@ -1,6 +1,8 @@
 # Class 1, Exercise 6
 # output is two files: myList.yml & myList.json
-# 
+#
+#!/usr/bin/env python
+ 
 import yaml
 import json
 import pprint

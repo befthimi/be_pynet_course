@@ -1,6 +1,8 @@
 # Class 1, Exercise 7
 # reads in two files: myList.yml & myList.json
 # pretty prints the contents of these two files
+#!/usr/bin/env python
+
 
 import yaml
 import json
