@@ -1,5 +1,3 @@
 # be_pynet_course
 
-Adding a Comment
-
-You want more commentes I'll give you more comments. comments comments comments.
+This is the root directory for my efforts related to Kirk's Python for Network Engineers course
