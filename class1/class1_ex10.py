@@ -1,13 +1,16 @@
-# Class 1, Exercise 10
-# Find the crypto maps that are not using AES (based-on the transform set name). Print these entries and their corresponding transform set name.
 #!/usr/bin/env python
-
+"""
+Class 1, Exercise 10
+Find the crypto maps that are not using AES (based-on the transform set name).
+Print these entries and their corresponding transform set name.
+"""
 from ciscoconfparse import CiscoConfParse
 
-cisco_config = CiscoConfParse ("cisco_ipsec.txt")
+cisco_config = CiscoConfParse("cisco_ipsec.txt")
 
-print "\nThis script lists the crypto maps that are not using AES in the transform set and the transform set name"
-print"-----------------------------------------------------------------------------------------------------------"
+print """\nThis script lists the crypto maps that are not using AES in the
+transform set and the transform set name"""
+print"-" * 114
 
 no_AES_crymaps = cisco_config.find_objects_wo_child(r'crypto map CRYPTO', r'AES')
 for obj in no_AES_crymaps:
@@ -25,4 +28,4 @@ for obj in no_AES_crymaps:
                 else:
                     count = count + 1
 
-print"-----------------------------------------------------------------------------------------------------------"
+print"-" * 114

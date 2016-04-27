@@ -1,11 +1,13 @@
-# Class 1, Exercise 8
-# Finds all of the crypto map entries in the file (lines that begin with 'crypto map CRYPTO') and for each crypto map entry prints out its children.
 #!/usr/bin/env python
-
+# Class 1, Exercise 8
+"""
+Finds all of the crypto map entries in the file (lines that begin with 'crypto map CRYPTO') and
+for each crypto map entry prints out its children.
+"""
 from ciscoconfparse import CiscoConfParse
 
 num_cryptomaps = 0
-cisco_config = CiscoConfParse ("cisco_ipsec.txt")
+cisco_config = CiscoConfParse("cisco_ipsec.txt")
 
 #print cisco_config
 print "===========\n"
