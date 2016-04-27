@@ -1,0 +1,10 @@
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ pwd
+/home/befthimiou/be_pynet_course/class2
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ mkdir SNMP
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ cd SNMP
+(applied_python)[befthimiou@ip-172-30-0-39 SNMP]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import snmp_helper
+>>> 

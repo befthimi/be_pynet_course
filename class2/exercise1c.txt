@@ -1,0 +1,62 @@
+### module in my "class2" directory ###
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ ls -l
+total 12
+-rw-rw-r-- 1 befthimiou befthimiou  88 Apr 17 14:35 exercise2c.py
+-rw-rw-r-- 1 befthimiou befthimiou 133 Apr 18 06:27 my_func.py
+-rw-rw-r-- 1 befthimiou befthimiou  61 Apr 15 14:18 README.md
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ python exercise2c.py
+hello
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ ls -l
+total 16
+-rw-rw-r-- 1 befthimiou befthimiou  88 Apr 17 14:35 exercise2c.py
+-rw-rw-r-- 1 befthimiou befthimiou 133 Apr 18 06:27 my_func.py
+-rw-rw-r-- 1 befthimiou befthimiou 299 Apr 18 13:26 my_func.pyc
+-rw-rw-r-- 1 befthimiou befthimiou  61 Apr 15 14:18 README.md
+
+### move module to one directory below "class2" directory
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ rm my_func.pyc
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ mv my_func.py ../
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ ls -l
+total 8
+-rw-rw-r-- 1 befthimiou befthimiou 88 Apr 17 14:35 exercise2c.py
+-rw-rw-r-- 1 befthimiou befthimiou 61 Apr 15 14:18 README.md
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ python exercise2c.py
+Traceback (most recent call last):
+  File "exercise2c.py", line 6, in <module>
+    import my_func
+ImportError: No module named my_func
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ echo $PYTHONPATH
+/home/befthimiou/DJANGOX/djproject/
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ export PYTHONPATH='/home/befthimiou/be_pynet_course:/home/befthimiou/DJANGOX/djproject/'
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ echo $PYTHONPATH
+/home/befthimiou/be_pynet_course:/home/befthimiou/DJANGOX/djproject/
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ python exercise2c.py
+hello
+
+
+
+### move module to site-packages directory ###
+
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ rm ../my_func.pyc
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ mv ../my_func.py ~/applied_python/lib/python2.7/site-packages/
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ ls -l ../
+total 64
+drwxrwxr-x 2 befthimiou befthimiou  4096 Apr 17 14:16 class1
+drwxrwxr-x 2 befthimiou befthimiou  4096 Apr 18 13:27 class2
+drwxrwxr-x 2 befthimiou befthimiou  4096 Apr 15 14:19 class3
+drwxrwxr-x 2 befthimiou befthimiou  4096 Apr 15 14:19 class4
+-rw-rw-r-- 1 befthimiou befthimiou 11357 Apr  8 14:37 LICENSE
+-rw-rw-r-- 1 befthimiou befthimiou    86 Apr  9 14:46 myListCond.txt
+-rw-rw-r-- 1 befthimiou befthimiou    96 Apr  9 14:46 myListExp.txt
+-rw-rw-r-- 1 befthimiou befthimiou    97 Apr 10 05:36 myList.json
+-rw-rw-r-- 1 befthimiou befthimiou    96 Apr 10 05:36 myList.yml
+-rw-rw-r-- 1 befthimiou befthimiou    64 Apr  8 15:02 printtest.py
+-rw-rw-r-- 1 befthimiou befthimiou   115 Apr 15 14:25 README.md
+-rw-rw-r-- 1 befthimiou befthimiou   176 Apr  9 04:45 test123copy.py
+-rw-rw-r-- 1 befthimiou befthimiou   197 Apr  9 04:44 test123.py
+drwxrwxr-x 2 befthimiou befthimiou  4096 Apr  9 04:45 testDIR
+(applied_python)[befthimiou@ip-172-30-0-39 class2]$ python exercise2c.py
+hello
+
+
