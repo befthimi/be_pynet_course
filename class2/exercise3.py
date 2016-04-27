@@ -3,18 +3,19 @@
 Write a script that connects to the lab pynet-rtr1, logins, and executes the
 'show ip int brief' command.
 '''
-
 import telnetlib
 import time
 import socket
 import sys
 import getpass
 
-class mytelnetlib(object):
-
+class MyTelnetlib(object):
+    """
+    My Telnet library
+    """
     def __init__(self):
-        self.TELNET_PORT = 23
-        self.TELNET_TIMEOUT = 6
+        self.telnet_port = 23
+        self.telnet_timeout = 6
 
     def send_command(self, remote_conn, cmd):
         '''
@@ -30,9 +31,9 @@ class mytelnetlib(object):
         '''
         Login to network device
         '''
-        output = remote_conn.read_until("sername:", self.TELNET_TIMEOUT)
+        output = remote_conn.read_until("sername:", self.telnet_timeout)
         remote_conn.write(username + '\n')
-        output += remote_conn.read_until("ssword:", self.TELNET_TIMEOUT)
+        output += remote_conn.read_until("ssword:", self.telnet_timeout)
         remote_conn.write(password + '\n')
         return output
 
@@ -47,7 +48,7 @@ class mytelnetlib(object):
         Establish telnet connection
         '''
         try:
-            return telnetlib.Telnet(ip_addr, self.TELNET_PORT, self.TELNET_TIMEOUT)
+            return telnetlib.Telnet(ip_addr, self.telnet_port, self.telnet_timeout)
         except socket.timeout:
             sys.exit("Connection timed-out")
 
@@ -78,6 +79,6 @@ class mytelnetlib(object):
         remote_conn.close()
 
 if __name__ == "__main__":
-    execute = mytelnetlib()
-    execute.main()
+    EXECUTE = MyTelnetlib()
+    EXECUTE.main()
 

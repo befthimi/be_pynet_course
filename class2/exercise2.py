@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-
-#connects to router using Telnet. Returns output of "show ip int brief" command.
-#added some code to obtain variable command from user, but have commented this out, as it had some caveats and wasn't what the questions asked.
-#added some code to strip the display of the executed command and the hostname at the end of the output.
-
+"""
+connects to router using Telnet. Returns output of "show ip int brief" command.
+added some code to obtain variable command from user, but have commented this out,
+as it had some caveats and wasn't what the questions asked.
+added some code to strip the display of the executed command and the hostname at the
+end of the output.
+"""
 import telnetlib
 import time
 
@@ -11,6 +13,10 @@ TELNET_PORT = 23
 TELNET_TIMEOUT = 6
 
 def get_command_output(remote_conn, command, hostname):
+    """
+    Send and obtain the command output.
+    Then return the output as text.
+    """
     remote_conn.write(command + '\n')
     time.sleep(1)
     output = remote_conn.read_very_eager()
@@ -21,10 +27,13 @@ def get_command_output(remote_conn, command, hostname):
 
 
 def main():
+    """
+    the main function
+    """
     ip_addr = '50.76.53.27'
     username = 'pyclass'
     password = '88newclass'
-    
+
     print "Attempting Telnet connection..."
 
     remote_conn = telnetlib.Telnet(ip_addr, TELNET_PORT, TELNET_TIMEOUT)
@@ -34,7 +43,6 @@ def main():
     remote_conn.write(password + '\n')
 
     time.sleep(1)
-    
 #   capture hostname to variable
     remote_conn.write('\n')
     time.sleep(1)
