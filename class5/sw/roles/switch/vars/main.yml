@@ -1,0 +1,7 @@
+---
+build_switches:
+  - {hostname: pynet-sw1, secret: blablabla, access_vlan: 10, ip_addr: 1.1.1.1, default_gateway: 1.1.1.254, snmp_community: cnmty, SNMPv3: True }
+  - {hostname: pynet-sw2, secret: blablabla, access_vlan: 10, ip_addr: 1.1.2.1, default_gateway: 1.1.2.254, snmp_community: cnmty, SNMPv3: True }
+  - {hostname: pynet-sw3, secret: blablabla, access_vlan: 10, ip_addr: 1.1.3.1, default_gateway: 1.1.3.254, snmp_community: cnmty, SNMPv3: True }
+  - {hostname: pynet-sw4, secret: blablabla, access_vlan: 10, ip_addr: 1.1.4.1, default_gateway: 1.1.4.254, snmp_community: cnmty, SNMPv3: False }
+  - {hostname: pynet-sw5, secret: blablabla, access_vlan: 10, ip_addr: 1.1.5.1, default_gateway: 1.1.5.254, snmp_community: cnmty, SNMPv3: False }

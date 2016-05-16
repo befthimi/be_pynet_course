@@ -1,0 +1,5 @@
+---
+- name: Generate switch configuration file
+  template: src=access_switch.j2
+             dest=/home/befthimiou/be_pynet_course/class5/{{item.hostname}}.txt
+  with_items: build_switches
