@@ -1,0 +1,14 @@
+---
+
+- name: Configure Arista Trunk interface
+  hosts: arista
+
+  tasks:
+    - name: Set Ethernet5 to a trunk
+      eos_switchport: name=Ethernet5 mode=trunk trunk_native_vlan=1 trunk_allowed_vlans=101,102,103
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+

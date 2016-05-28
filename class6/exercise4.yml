@@ -1,0 +1,33 @@
+---
+
+- name: Cleanup Arista interface to default
+  hosts: arista
+
+  tasks:
+    - name: Clear Ethernet5 switchport to Default
+      eos_switchport: name=Ethernet5 mode=access access_vlan=1 trunk_allowed_vlans=1-4094 trunk_native_vlan=1
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+    - name: Clear interface description
+      eos_interface: name=Ethernet5 description=""
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+
+    - name: Remove VLANs
+      eos_vlan: name={{item.name}} vlanid={{item.vlanid}} state=absent
+            username={{ eapi_username }}
+            password={{ eapi_password }}
+            host={{ eapi_hostname }}
+            port={{ eapi_port }}
+            transport=https
+      with_items:
+        - {name: YELLOW, vlanid: 101} 
+        - {name: PURPLE, vlanid: 102}
+        - {name: GREEN, vlanid: 103}

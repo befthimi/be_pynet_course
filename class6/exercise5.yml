@@ -1,0 +1,18 @@
+---
+
+- name: Cisco IOS Manipulation
+  hosts: cisco
+  gather_facts: False
+
+  tasks:
+  - name: Test file transfer
+    cisco_file_transfer:
+        source_file="/home/befthimiou/ANSIBLE/set_cisco_logging.txt"
+        dest_file=set_cisco_logging.txt
+        overwrite=true
+        enable_scp=true
+        host={{ host }}
+        port={{ port }}
+        username={{ username }}
+        password={{ password }}
+
