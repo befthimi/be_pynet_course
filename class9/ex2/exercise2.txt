@@ -1,0 +1,34 @@
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+>>> mytest.func1
+<function func1 at 0x7fc013cbef50>
+>>> mytest.func1()
+executing the world function func1
+>>> mytest.func2()
+executing the simple func2
+>>> mytest.func3()
+executing the whatever func3
+>>> func1()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'func1' is not defined
+>>> from mytest import func1
+>>> from mytest import func2
+>>> from mytest import func3
+>>> func1()
+executing the world function func1
+>>> func2()
+executing the simple func2
+>>> func3()
+executing the whatever func3
+>>> dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'func1', 'func2', 'func3', 'mytest']
+>>> exit()
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ pwd
+/home/befthimiou/be_pynet_course/class9
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ ls
+exercise1.txt  mytest  README.md

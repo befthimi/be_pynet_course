@@ -1,0 +1,29 @@
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ ls
+exercise1.py  mytest  README.md
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ pwd
+/home/befthimiou/be_pynet_course/class9
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ cd mytest
+(applied_python)[befthimiou@ip-172-30-0-39 mytest]$ ls
+simple.py  whatever.py  world.py
+(applied_python)[befthimiou@ip-172-30-0-39 mytest]$ cd ..
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest
+>>> import mytest.simple
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.simple
+>>> import mytest.whatever
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest.whatever
+>>> from mytest import world
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named mytest
+>>> exit()

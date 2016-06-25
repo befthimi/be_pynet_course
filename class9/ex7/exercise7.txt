@@ -1,0 +1,52 @@
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from sys import path
+>>> path
+['', '/home/befthimiou/DJANGOX/djproject', '/home/befthimiou/applied_python/local/lib64/python2.7/site-packages', '/home/befthimiou/applied_python/local/lib/python2.7/site-packages', '/home/befthimiou/applied_python/lib64/python2.7', '/home/befthimiou/applied_python/lib/python2.7', '/home/befthimiou/applied_python/lib64/python2.7/site-packages', '/home/befthimiou/applied_python/lib/python2.7/site-packages', '/home/befthimiou/applied_python/lib64/python2.7/lib-dynload', '/usr/lib64/python2.7', '/usr/lib/python2.7']
+>>> from pprint import pprint
+>>>
+>>>
+>>> pprint (path)
+['',
+ '/home/befthimiou/DJANGOX/djproject',
+ '/home/befthimiou/applied_python/local/lib64/python2.7/site-packages',
+ '/home/befthimiou/applied_python/local/lib/python2.7/site-packages',
+ '/home/befthimiou/applied_python/lib64/python2.7',
+ '/home/befthimiou/applied_python/lib/python2.7',
+ '/home/befthimiou/applied_python/lib64/python2.7/site-packages',
+ '/home/befthimiou/applied_python/lib/python2.7/site-packages',
+ '/home/befthimiou/applied_python/lib64/python2.7/lib-dynload',
+ '/usr/lib64/python2.7',
+ '/usr/lib/python2.7']
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ cd .
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ pwd
+/home/befthimiou/be_pynet_course/class9
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ ls
+ex1  ex2  ex3  ex4  ex5  ex6  ex7  mytest  README.md
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.path.append("/home/befthimiou/be_pynet_course/class9")
+>>> from pprint import pprint
+>>> pprint (sys.path)
+['',
+ '/home/befthimiou/DJANGOX/djproject',
+ '/home/befthimiou/applied_python/local/lib64/python2.7/site-packages',
+ '/home/befthimiou/applied_python/local/lib/python2.7/site-packages',
+ '/home/befthimiou/applied_python/lib64/python2.7',
+ '/home/befthimiou/applied_python/lib/python2.7',
+ '/home/befthimiou/applied_python/lib64/python2.7/site-packages',
+ '/home/befthimiou/applied_python/lib/python2.7/site-packages',
+ '/home/befthimiou/applied_python/lib64/python2.7/lib-dynload',
+ '/usr/lib64/python2.7',
+ '/usr/lib/python2.7',
+ '/home/befthimiou/be_pynet_course/class9']
+>>> exit()
+

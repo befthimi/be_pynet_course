@@ -1,0 +1,27 @@
+(applied_python)[befthimiou@ip-172-30-0-39 class9]$ python
+Python 2.7.10 (default, Dec  8 2015, 18:25:23)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mytest
+>>> dir(mytest)
+['MyClass', '__all__', '__builtins__', '__doc__', '__file__', '__name__', '__package__', '__path__', 'func1', 'func2', 'func3', 'simple', 'whatever', 'world']
+>>> testclass = mytest.MyClass(2, 2, 2)
+>>> testclass.x
+2
+>>> testclass.hello
+<bound method MyClass.hello of <mytest.world.MyClass object at 0x7f1ef0d1c9d0>>
+>>> testclass.hello()
+Hello. Sum of input is: 6
+>>> testclass.not_hello()
+Not Hello, prints product: 8
+>>> myclassQ = mytest.MyClass(10, 10, 10)
+>>> myclassQ.x
+10
+>>> myclassQ.z
+10
+>>> myclassQ.hello()
+Hello. Sum of input is: 30
+>>> myclassQ.not_hello()
+Not Hello, prints product: 1000
+>>>
+>>>
