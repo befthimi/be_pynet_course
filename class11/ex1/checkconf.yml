@@ -1,0 +1,14 @@
+---
+- name: Verifying NETCONF
+  hosts: pynet-jnpr-srx1
+
+  tasks: 
+    - name: Verifying NETCONF
+      wait_for: host={{ ansible_ssh_host }}  port=830      # variable defined in inventory file
+
+    - name: Get SRX Facts
+      junos_get_facts: host={{ ansible_ssh_host }} user={{ juniper_user }} passwd={{ juniper_passwd }}
+      register: srxfacts 
+
+    - name: Print SRX information
+      debug: msg="{{ srxfacts.facts }}"
